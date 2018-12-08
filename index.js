@@ -2,6 +2,8 @@
 // Import express
 let express = require('express');
 var cors = require('cors');
+const path = require('path');
+
 // Initialize the app
 let app = express();
 // Setup server port
@@ -29,8 +31,7 @@ mongoose.connect(connectionString, {
         process.exit();
     }
 });
-const path = require('path');
-app.use(express.static(path.join(__dirname, 'medgo-react/build')));
+app.use(express.static(path.join(__dirname, 'React-form/build')));
 
 app.use('/api', require('./routes/api')());
 
@@ -39,3 +40,5 @@ app.listen(port, function () {
      console.log("Running RestHub on port " + port);
 });
 
+
+// 7ell serveur el node please

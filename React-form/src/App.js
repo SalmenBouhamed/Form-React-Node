@@ -68,9 +68,8 @@ class App extends Component {
         tel: this.state.tel,
         msg: this.state.msg
       })
-      console.log(response.data);
-      this.state.sentMessage = "You're request has been sent!";
-
+        this.state.sentMessage = "You're request has been sent!";
+        console.log(response.data);
     } catch (error) {
       console.log('error : ',error)
     } 
@@ -133,7 +132,7 @@ class App extends Component {
             </div>
             <div class="row">
               <button type="submit" onClick={this.handleSubmit} >Submit form</button>
-              {sentMessage && <p>{sentMessage}</p> }
+              <p>{sentMessage}</p>
             </div>
           </div>
           

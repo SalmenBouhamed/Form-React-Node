@@ -39,6 +39,3 @@ app.use('/api', require('./routes/api')());
 app.listen(port, function () {
      console.log("Running RestHub on port " + port);
 });
-
-
-// 7ell serveur el node please
